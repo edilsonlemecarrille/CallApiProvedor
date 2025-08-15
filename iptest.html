@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elc net</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body onload=cabecalho()>
+    <div id="div-cabecalho"></div>
+
+    <p class="titulo-pagina">IPs Disponíveis</p>
+    <hr>
+
+    <p class="orientacao-1">Click sobre o IP e aguarde a resposta:</p>
+    <p class="orientacao-2">(Click mais de uma vez para confirmar)</p>
+
+    <div>
+        <button class="btn-large btn-disable" id="ip-teste-220" onclick="pingTest(this)">172.16.88.220</button>
+        <button class="btn-large btn-disable" id="ip-teste-221" onclick="pingTest(this)">172.16.88.221</button>
+        <button class="btn-large btn-disable" id="ip-teste-222" onclick="pingTest(this)">172.16.88.222</button>
+        <button class="btn-large btn-disable" id="ip-teste-223" onclick="pingTest(this)">172.16.88.223</button>
+        <button class="btn-large btn-disable" id="ip-teste-224" onclick="pingTest(this)">172.16.88.224</button>
+        <button class="btn-large btn-disable" id="ip-teste-225" onclick="pingTest(this)">172.16.88.225</button>
+        <button class="btn-large btn-disable" id="ip-teste-226" onclick="pingTest(this)">172.16.88.226</button>
+        <button class="btn-large btn-disable" id="ip-teste-227" onclick="pingTest(this)">172.16.88.227</button>
+        <button class="btn-large btn-disable" id="ip-teste-228" onclick="pingTest(this)">172.16.88.228</button>
+        <button class="btn-large btn-disable" id="ip-teste-229" onclick="pingTest(this)">172.16.88.229</button>
+        <hr>
+        <button class="btn-large" id="refresh" onclick="refresh()">Refresh</button>
+    </div>
+</body>
+
+</html>

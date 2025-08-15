@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elc net</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body onload=cabecalho()>
+    <div class="div-container" id="div-cabecalho"></div>
+
+    <div class="div-container" id="consultar-container">
+        <p class="titulo-pagina">Consultar Boletos</p>
+        <p class="orientacao-1">Digite o CPF do cliente:</p>
+
+        <input type="text" id="cpf" onfocus="digitarCPF()" placeholder="somente números..." maxlength="14"
+            oninput="mascara(this)" class="input-text">
+        <br><br>
+    </div>
+
+    <div id="div-enviar">
+
+        <button class="btn-small" onclick="getDadosCliente()" style="display: block;">Enviar</button>
+    </div>
+
+    <div class="div-container" id="div-cliente" style="display: none;">
+        <p>Código: <span id="codigo"></span></p>
+        <p>Nome: <span class="bold" id="nome"></span></p>
+        <p>Endereço: <span id="endereco"></span></p>
+        <p style="display: none;">CPF: <span id="CPF"></span></p>
+    </div>
+
+    <div class="div-container" id="div-confirmar-msg" style="display: none;">
+        <p class="mensagem bold">Confirma o nome do cliente?</p>
+    </div>
+
+    <div id="div-confirmar-btn" style="display: none;">
+        <button class="btn-small" onclick="getDadosBoleto()">Confirmar</button>
+
+    </div>
+
+    <div class="div-container" id="erro-container" style="display: none;">
+        <p class="erro">Não foi possível atender sua solicitação.</p>
+        <p class="erro">Entre em contato com o Provedor</p>
+        <p class="erro">Pelo Whatsapp (18)99776-0998</p>
+        <p class="erro">Ou digite o CPF novamente.</p>
+    </div>
+
+    <div class="div-container" id="boleto-container" style="display: none;">
+        <!--label for="select-meses">Mensalidades Disponíveis:</label-->
+        <label for="select-meses">MENSALIDADES DISPONÍVEIS:</label>
+        <select class="select-meses" name="select-meses" id="select-meses" onchange="showMonth(this);">
+        </select>
+    </div>
+
+    <div class="div-container boleto-container" id="div-boleto" style="display: none;">
+        <p>Referência: <span class="bold" id="referencia"></span></p>
+        <p>Vencimento: <span id="vencimento"></span></p>
+        <p>Valor: <span id="valor"></span></p>
+        <p>Forma de Pagamento: <span id="forma"></span></p>
+    </div>
+
+    <div class="div-container" id="numeracao" style="display: none;"></div>
+
+    <div id="chavepix" style="display: none;"></div>
+
+    <div id="div-opcoes" style="display: none;">
+        <a id="barras" href="javascript:copiarNumeracao()">Copiar Código de Barras</a>
+        <a id="boleto">Baixar Boleto</a>
+        <a id="carne">Baixar Carnê Completo</a>
+    </div>
+
+</body>
+
+</html>

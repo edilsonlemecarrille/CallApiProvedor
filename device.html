@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elc net</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body onload=cabecalho()>
+    <div id="div-cabecalho"></div>
+
+    <p class="titulo-pagina">Informações do Dispositivo</p>
+    <hr>
+
+    <p class="orientacao-1">Digite o IP do Dispositivo:</p>
+    <p class="orientacao-2">(Click no botão para testar WLan)</p>
+
+    <input type="text" id="ip-wlan" onfocus="digitarIP()" oninput="ipbutton(this)" value="" onclick="changeIP(this)"
+        placeholder="digite o IP do rádio" class="input-text">
+
+    <button class="btn-large" id="btn-device-ping" onclick="pingTest(this)">000.000.000.000</button>
+
+    <div id="div-info" style="display: block; float: left;"></div>
+
+</body>
+
+</html>
